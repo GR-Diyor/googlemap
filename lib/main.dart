@@ -1,9 +1,8 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:googlemap/service/dio_service.dart';
 
+import 'functions.dart';
 import 'model/direction_model.dart';
 
 void main() => runApp(MyApp());
@@ -85,6 +84,12 @@ class MapSampleState extends State<MapSample> {
               ),
               child: const Text("DEST"),
             ),
+          IconButton(
+            onPressed: (){
+              About(context);
+            },
+            icon: Icon(Icons.perm_device_info,color: Colors.white,),
+          ),
         ],
       ),
       body: Stack(
